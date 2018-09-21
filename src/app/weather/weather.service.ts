@@ -41,13 +41,7 @@ export class WeatherService implements IWeatherService {
         `${environment.baseUrl}api.openweathermap.org/data/2.5/weather?` +
           `q=${city},${country}&appid=${environment.appId}`
       )
-      .pipe(
-        map(data => {
-          console.log(data);
-          return data;
-        }),
-        map(data => this.transformToICurrentWeather(data))
-      );
+      .pipe(map(data => this.transformToICurrentWeather(data)));
   }
 
   private transformToICurrentWeather(
