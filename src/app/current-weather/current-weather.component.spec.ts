@@ -4,6 +4,7 @@ import { WeatherServiceFake } from "../weather/weather.service.fake";
 import { CurrentWeatherComponent } from "./current-weather.component";
 import { MaterialModule } from "../material.module";
 import { NoopAnimationsModule } from "@angular/platform-browser/animations";
+import { MatFormFieldModule } from "@angular/material";
 
 describe("CurrentWeatherComponent", () => {
   let component: CurrentWeatherComponent;
@@ -12,7 +13,7 @@ describe("CurrentWeatherComponent", () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [CurrentWeatherComponent],
-      imports: [MaterialModule, NoopAnimationsModule],
+      imports: [MaterialModule, NoopAnimationsModule, MatFormFieldModule],
       providers: [{ provide: WeatherService, useClass: WeatherServiceFake }]
     }).compileComponents();
   }));
