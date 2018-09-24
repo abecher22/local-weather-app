@@ -1,1 +1,1 @@
-FROM abecher/local-weather:1.0.1
+FROM abecher/local-weather:2.0.0
